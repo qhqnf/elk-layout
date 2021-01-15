@@ -8,6 +8,7 @@ services:
     ports:
       - "9200:9200"
     environment:
+      # elasticsearch maximun minimun heap size option
       ES_JAVA_OPTS: "-Xmx1g -Xms1g"
     networks:
       - elk
@@ -30,6 +31,7 @@ services:
     ports:
       - "9600:9600"
     environment:
+      # logstash maximun minimun heap size option
       LS_JAVA_OPTS: "-Xmx512m -Xms512m"
     networks:
       - elk
